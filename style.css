@@ -1,0 +1,15 @@
+.menu-panel {
+  padding: 16px;
+  font-size: 22px;
+  width: 512px;
+  height: 128px;
+  color: white;
+  cursor: pointer;
+  transition: height 300ms ease, width 300ms ease; }
+  .menu-panel:nth-child(1) {
+    background: #d9411e; }
+  .menu-panel:hover {
+    width: 600px;
+    height: 128px; }
+
+/*# sourceMappingURL=style.css.map */

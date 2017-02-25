@@ -1,0 +1,19 @@
+// home page
+
+.menu-panel {
+  padding: 16px;
+  font-size: 22px;
+  width: 512px;
+  height: 128px;
+  color: white;
+  cursor: pointer;
+  &:nth-child(1) {
+    background: #d9411e;
+  }
+  transition: height 300ms ease, width 300ms ease;
+  &:hover {
+    width: 600px;
+    height: 128px;
+  }
+
+}
