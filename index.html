@@ -8,13 +8,16 @@
   <script type="text/javascript" src="bower_components/angular/angular.js"></script>
   <script type="text/javascript" src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
   <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="views/npm/npm.controller.js"></script>
+  <script type="text/javascript" src="ProjectDirectoryService.js"></script>
   <script type="text/javascript" src="directives/menu-panel/menu-panel.directive.js"></script>
 </head>
 <body>
 
 <div class="main" ng-app="nickpal" ng-controller="main">
   <div class="about-me">
-    <np-menu-panel title="'I open source'" title-bold="' nerdy npm modules'" panel-background="'red'"></np-menu-panel>
+    <!--TODO: add ngclick here?-->
+    <np-menu-panel ui-sref="npm" title="'I open source'" title-bold="' nerdy npm modules'" panel-background="'red'"></np-menu-panel>
   </div>
   <div class="menu-items"></div>
   <div class="item-window">
