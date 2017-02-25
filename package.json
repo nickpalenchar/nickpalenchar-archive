@@ -1,0 +1,24 @@
+{
+  "name": "nickpalenchar",
+  "version": "1.0.0",
+  "description": "The repo representing the person of the same name ^*^",
+  "main": "index.js",
+  "dependencies": {
+    "angular-ui-router": "^0.4.2",
+    "normalize.css": "^5.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickpalenchar/nickpalenchar.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nickpalenchar/nickpalenchar/issues"
+  },
+  "homepage": "https://github.com/nickpalenchar/nickpalenchar#readme"
+}
