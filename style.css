@@ -10,7 +10,7 @@
   margin: 12px 0;
   position: relative;
   z-index: 10;
-  transition: height 300ms ease, width 300ms ease, padding 300ms ease; }
+  transition: height 300ms ease, width 300ms ease, padding 300ms ease, font-size 300ms ease; }
   .menu-panel:not(.force) {
     padding: 16px;
     width: 512px;
@@ -19,12 +19,9 @@
     background: #d9411e; }
   .menu-panel:hover:not(.force) {
     width: 600px;
-    height: 128px;
-    position: relative;
-    z-index: 10; }
+    height: 128px; }
   .menu-panel.collapsed {
     width: 50px;
-    padding: 2px;
     font-size: 8px; }
     .menu-panel.collapsed .standard {
       display: none; }

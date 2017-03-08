@@ -23,20 +23,17 @@
   &:nth-child(1) {
     background: #d9411e;
   }
-  transition: height 300ms ease, width 300ms ease, padding 300ms ease;
+  transition: height 300ms ease, width 300ms ease, padding 300ms ease,
+              font-size 300ms ease;
 
   &:hover:not(.force) {
     width: 600px;
     height: 128px;
-    /// bring on top of any state view
-    position: relative;
-    z-index: 10;
   }
 
   &.collapsed {
-
     width: 50px;
-    padding: 2px;
+    //padding: 2px;
     font-size: 8px;
     .standard {
       display: none;
