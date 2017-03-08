@@ -14,14 +14,13 @@
   .menu-panel:not(.force) {
     padding: 16px;
     width: 512px;
-    display: inline-block; }
-  .menu-panel:nth-child(1) {
-    background: #d9411e; }
+    display: block; }
   .menu-panel:hover:not(.force) {
     width: 600px;
     height: 128px; }
   .menu-panel.collapsed {
     width: 50px;
+    padding: 2px;
     font-size: 8px; }
     .menu-panel.collapsed .standard {
       display: none; }
@@ -30,10 +29,12 @@
       font-size: 22px;
       position: relative; }
       .menu-panel.collapsed:hover .standard {
-        display: inline; }
+        display: block; }
     .menu-panel.collapsed.force {
       width: 50px;
       font-size: 8px; }
+      .menu-panel.collapsed.force .standard {
+        display: none; }
 
 ui-view {
   height: 100vh;
@@ -42,5 +43,20 @@ ui-view {
   position: absolute;
   margin-left: 50px;
   background: red; }
+
+np-menu-panel:nth-child(1) div {
+  background: #e74c3c; }
+
+np-menu-panel:nth-child(2) div {
+  background: #f1c40f; }
+
+np-menu-panel:nth-child(3) div {
+  background: #34495e; }
+
+np-menu-panel:nth-child(4) div {
+  background: #2ecc71; }
+
+np-menu-panel:nth-child(5) div {
+  background: #9b59b6; }
 
 /*# sourceMappingURL=style.css.map */
