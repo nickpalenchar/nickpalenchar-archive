@@ -29,7 +29,11 @@ let nickpal = angular.module("nickpal", ['ui.router'])
       $menuPanel.addClass('collapsed force');
       var $cachedMenu = $('.about-me', true);
       setTimeout(function () {
-        $menuPanel.removeClass('force');
+        $('body').on('mousemove', function () {
+          console.log('mouse move triggered');
+          $menuPanel.removeClass('force');
+          $('body').off();
+        });
       },1020)
     }
   })

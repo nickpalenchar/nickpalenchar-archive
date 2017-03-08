@@ -17,12 +17,10 @@
   &:not(.force) {
     padding: 16px;
     width: 512px;
-    display: inline-block;
+    display: block;
   }
+  //// color pallett
 
-  &:nth-child(1) {
-    background: #d9411e;
-  }
   transition: height 300ms ease, width 300ms ease, padding 300ms ease,
               font-size 300ms ease;
 
@@ -33,7 +31,7 @@
 
   &.collapsed {
     width: 50px;
-    //padding: 2px;
+    padding: 2px;
     font-size: 8px;
     .standard {
       display: none;
@@ -43,13 +41,16 @@
       font-size: 22px;
       position: relative;
       .standard {
-        display: inline;
+        display: block;
       }
     }
     &.force {
       // negate hover expansion
       width: 50px;
       font-size: 8px;
+      .standard {
+        display: none;
+      }
     }
   }
 }
@@ -62,4 +63,20 @@ ui-view {
   position: absolute;
   margin-left: 50px;
   background: red;
+}
+
+np-menu-panel:nth-child(1) div {
+  background: #e74c3c;
+}
+np-menu-panel:nth-child(2) div {
+  background: #f1c40f;
+}
+np-menu-panel:nth-child(3) div {
+  background: #34495e;
+}
+np-menu-panel:nth-child(4) div {
+  background: #2ecc71;
+}
+np-menu-panel:nth-child(5) div {
+  background: #9b59b6;
 }
