@@ -5,7 +5,8 @@ nickpal.directive('npMenuPanel', function () {
     scope: {
       title: '=title',
       titleBold: '=titleBold',
-      panelBackground: '=color'
+      panelBackground: '=color',
+      pic: '=pic'
     },
   }
 });

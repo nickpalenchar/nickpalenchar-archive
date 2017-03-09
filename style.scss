@@ -65,18 +65,18 @@ ui-view {
   background: red;
 }
 
-np-menu-panel:nth-child(1) div {
+np-menu-panel:nth-child(5n+1) div {
   background: #e74c3c;
 }
-np-menu-panel:nth-child(2) div {
+np-menu-panel:nth-child(5n+2) div {
   background: #f1c40f;
 }
-np-menu-panel:nth-child(3) div {
+np-menu-panel:nth-child(5n+3) div {
   background: #34495e;
 }
-np-menu-panel:nth-child(4) div {
+np-menu-panel:nth-child(5n+4) div {
   background: #2ecc71;
 }
-np-menu-panel:nth-child(5) div {
+np-menu-panel:nth-child(5n+5) div {
   background: #9b59b6;
 }
