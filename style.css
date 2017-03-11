@@ -29,12 +29,20 @@
       font-size: 22px;
       position: relative; }
       .menu-panel.collapsed:hover .standard {
-        display: block; }
+        display: inline; }
     .menu-panel.collapsed.force {
       width: 50px;
       font-size: 8px; }
       .menu-panel.collapsed.force .standard {
         display: none; }
+  .menu-panel.pic {
+    background: url("assets/nature.png") no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border: 1px solid #696969;
+    filter: sepia(30%); }
 
 ui-view {
   height: 100vh;
