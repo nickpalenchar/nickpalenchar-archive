@@ -1,3 +1,5 @@
+function simpleState(name){return { name: name, url: '/' + name, templateUrl: 'views/'+name+'/'+name+'.html'}}
+
 let nickpal = angular.module("nickpal", ['ui.router'])
 
   .config(function($stateProvider){
@@ -6,17 +8,13 @@ let nickpal = angular.module("nickpal", ['ui.router'])
         name: 'home',
         url: '/'
       })
-      .state({
-        name: 'about',
-        url: '/about',
-        templateUrl: '/views/about.html'
-      })
-      .state({
-        name: 'npm',
-        url: '/npm',
-        templateUrl: '/views/npm/npm.html'
-      })
+      .state(simpleState('about'))
+      .state(simpleState('npm'))
+      .state(simpleState('media'))
+      .state(simpleState('sideprojects'))
+      .state(simpleState('education'));
   })
+
 .run(function ($rootScope) {
 
   $rootScope.$on("$stateChangeSuccess", function (evt, toState) {
@@ -37,7 +35,6 @@ let nickpal = angular.module("nickpal", ['ui.router'])
       },1020)
     }
   })
-
 })
 
 .controller('main', function($scope){

@@ -5,8 +5,10 @@ nickpal.directive('npMenuPanel', function () {
     scope: {
       title: '=title',
       titleBold: '=titleBold',
+      titleFinal: '=titleFinal',
       panelBackground: '=color',
-      pic: '=pic'
+      pic: '=pic',
+      ref: '=ref'
     },
   }
 });

@@ -1,3 +1,6 @@
-<div class="menu-panel" ng-show="!pic">
-  <span class="standard">{{title}}</span><br/><strong>{{titleBold}}</strong>
+<div class="menu-panel" ng-show="!pic" ui-sref="{{ref}}">
+  <span class="standard">{{title}}</span><br/><strong>{{titleBold}}</strong><br/><span class="standard">{{titleFinal}}</span>
+</div>
+<div class="menu-panel pic" ng-show="pic" ui-sref="home">
+  <span class="standard">Nick Palenchar</span><br/><span class="standard">(that's </span><strong>me</strong><span class="standard">)</span>
 </div>
