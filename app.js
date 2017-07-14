@@ -1,8 +1,9 @@
 function simpleState(name){return { name: name, url: '/' + name, templateUrl: 'views/'+name+'/'+name+'.html'}}
 
-let nickpal = angular.module("nickpal", ['ui.router'])
+var nickpal = angular.module("nickpal", ['ui.router'])
 
-  .config(function($stateProvider){
+  .config(function($stateProvider, $locationProvider){
+    $locationProvider.html5Mode(true);
     $stateProvider
       .state({
         name: 'home',
@@ -12,7 +13,7 @@ let nickpal = angular.module("nickpal", ['ui.router'])
       .state(simpleState('npm'))
       .state(simpleState('media'))
       .state(simpleState('sideprojects'))
-      .state(simpleState('education'));
+      .state(simpleState('articles'));
   })
 
 .run(function ($rootScope) {
