@@ -22,7 +22,7 @@ app.staticSubDirs = function(...paths){
 };
 
 
-app.staticSubDirs('lib', 'js', 'directives', 'views', 'bower_components', 'browser', 'assets');
+app.staticSubDirs('lib', 'js', 'directives', 'views', 'bower_components', 'node_modules', 'browser', 'assets');
 
 app.use((req, res )=> res.status(307).sendFile(path.join(__dirname, 'browser/index.html')));
 

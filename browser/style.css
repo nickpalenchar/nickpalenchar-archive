@@ -1,10 +1,22 @@
-.article-snipit {
-  border: 1px solid #34495e;
+#articles .article-snipit {
+  border: 1px solid #4e6d8c;
+  background: #f4f4f4;
   padding: 12px; }
-  .article-snipit h5 {
+  #articles .article-snipit h5 {
     margin-bottom: 4px; }
-  .article-snipit h1 {
+  #articles .article-snipit h1 {
     margin-top: 4px; }
+#articles .content-loading {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center; }
+#articles #read-more {
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+#articles .tags > .badge {
+  font-size: 10px;
+  padding-top: 5px;
+  background: white;
+  color: #686868; }
 
 * {
   box-sizing: border-box; }

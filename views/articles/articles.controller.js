@@ -10,7 +10,13 @@ nickpal.controller('articlesCtrl',function($scope, $http, Env){
       }catch(e){
         setTimeout($scope.$digest, 400);
       }finally {
-        // parseMarkdown();
+        setTimeout(function(){
+          var el = [].slice.call(document.getElementsByClassName('md-container'));
+          el.forEach(function(container, i){
+            container.innerHTML = marked(container.innerHTML);
+            $scope.articles[i].marked = true;
+          })
+        },0)
       }
     });
 
