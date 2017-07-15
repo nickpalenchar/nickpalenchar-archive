@@ -1,3 +1,5 @@
+$collapsed-padding: 78px;
+
 @mixin blur($px) {
   -webkit-filter: blur($px);
   -moz-filter: blur($px);
