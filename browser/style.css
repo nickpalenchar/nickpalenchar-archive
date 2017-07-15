@@ -18,6 +18,10 @@
   background: white;
   color: #686868; }
 
+.about-me-anchor {
+  position: fixed;
+  top: 0; }
+
 * {
   box-sizing: border-box; }
 
@@ -25,7 +29,7 @@
   color: white;
   cursor: pointer;
   height: 128px;
-  width: 50px;
+  width: 78px;
   font-size: 22px;
   margin: 12px 0;
   position: relative;
@@ -39,9 +43,9 @@
     width: 600px;
     height: 128px; }
   .menu-panel.collapsed {
-    width: 50px;
+    width: 78px;
     padding: 2px;
-    font-size: 8px; }
+    font-size: 12px; }
     .menu-panel.collapsed .standard {
       display: none; }
     .menu-panel.collapsed:hover {
@@ -51,8 +55,8 @@
       .menu-panel.collapsed:hover .standard {
         display: inline; }
     .menu-panel.collapsed.force {
-      width: 50px;
-      font-size: 8px; }
+      width: 78px;
+      font-size: 12px; }
       .menu-panel.collapsed.force .standard {
         display: none; }
   .menu-panel.pic {
