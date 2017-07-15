@@ -1,4 +1,11 @@
 <section id="articles">
     this is the education section
-    {{test2}}
+    <np-loading ng-if="articles === null"></np-loading>
+    <div ng-if="articles !== null">
+        <div class="article-snipit" ng-repeat="article in articles">
+            <h5 style="font-family: monospace; color: #34495e ">{{article.date}}</h5>
+            <a href="{{baseUrl+'/articles/'+article.urlTitle}}"><h1>{{article.title}}</h1></a>
+            <div class="container"><xmp theme="readable" style="display:none">{{article.preview}}</xmp></div>
+        </div>
+    </div>
 </section>

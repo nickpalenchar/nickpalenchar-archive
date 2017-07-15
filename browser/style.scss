@@ -6,6 +6,7 @@
   filter: blur($px);
 }
 
+@import '../views/articles/articles';
 // home page
 
 * {
@@ -39,7 +40,7 @@
   }
 
   &.collapsed {
-    width: 70px;
+    width: 50px;
     padding: 2px;
     font-size: 8px;
     .standard {
@@ -79,8 +80,9 @@ ui-view {
   overflow-y: auto;
   display: block;
   position: absolute;
-  margin-left: 50px;
-  background: red;
+  width: 100vw;
+  margin-left: -100px;
+  padding-left: 200px;
 }
 
 np-menu-panel:nth-child(5n+1) div {
