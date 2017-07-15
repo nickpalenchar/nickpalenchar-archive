@@ -1,0 +1,100 @@
+@mixin blur($px) {
+  -webkit-filter: blur($px);
+  -moz-filter: blur($px);
+  -o-filter: blur($px);
+  -ms-filter: blur($px);
+  filter: blur($px);
+}
+
+// home page
+
+* {
+  box-sizing: border-box;
+}
+.menu-panel {
+
+  color: white;
+  cursor: pointer;
+  height: 128px;
+  width: 50px;
+  font-size: 22px;
+    margin: 12px 0;
+  position:relative;
+  z-index: 10;
+
+  &:not(.force) {
+    padding: 16px;
+    width: 512px;
+    display: block;
+    //margin: 4px 0;
+  }
+  //// color pallett
+
+  transition: height 300ms ease, width 300ms ease, padding 300ms ease,
+              font-size 300ms ease;
+
+  &:hover:not(.force) {
+    width: 600px;
+    height: 128px;
+  }
+
+  &.collapsed {
+    width: 70px;
+    padding: 2px;
+    font-size: 8px;
+    .standard {
+      display: none;
+    }
+    &:hover {
+      width: 500px;
+      font-size: 22px;
+      position: relative;
+      .standard {
+        display: inline;
+      }
+    }
+    &.force {
+      // negate hover expansion
+      width: 50px;
+      font-size: 8px;
+      .standard {
+        display: none;
+      }
+    }
+  }
+  &.pic {
+    background: url('../assets/nature.png') no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border: 1px solid #696969;
+    filter: sepia(30%);
+  }
+}
+
+ui-view {
+  //width: 50px;
+  height: 100vh;
+  overflow-y: auto;
+  display: block;
+  position: absolute;
+  margin-left: 50px;
+  background: red;
+}
+
+np-menu-panel:nth-child(5n+1) div {
+  background: #e74c3c;
+}
+np-menu-panel:nth-child(5n+2) div {
+  background: #f1c40f;
+}
+np-menu-panel:nth-child(5n+3) div {
+  background: #34495e;
+}
+np-menu-panel:nth-child(5n+4) div {
+  background: #2ecc71;
+}
+np-menu-panel:nth-child(5n+5) div {
+  background: #9b59b6;
+}

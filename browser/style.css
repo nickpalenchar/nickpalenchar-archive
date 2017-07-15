@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box; }
+
+.menu-panel {
+  color: white;
+  cursor: pointer;
+  height: 128px;
+  width: 50px;
+  font-size: 22px;
+  margin: 12px 0;
+  position: relative;
+  z-index: 10;
+  transition: height 300ms ease, width 300ms ease, padding 300ms ease, font-size 300ms ease; }
+  .menu-panel:not(.force) {
+    padding: 16px;
+    width: 512px;
+    display: block; }
+  .menu-panel:hover:not(.force) {
+    width: 600px;
+    height: 128px; }
+  .menu-panel.collapsed {
+    width: 50px;
+    padding: 2px;
+    font-size: 8px; }
+    .menu-panel.collapsed .standard {
+      display: none; }
+    .menu-panel.collapsed:hover {
+      width: 500px;
+      font-size: 22px;
+      position: relative; }
+      .menu-panel.collapsed:hover .standard {
+        display: inline; }
+    .menu-panel.collapsed.force {
+      width: 50px;
+      font-size: 8px; }
+      .menu-panel.collapsed.force .standard {
+        display: none; }
+  .menu-panel.pic {
+    background: url("../assets/nature.png") no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border: 1px solid #696969;
+    filter: sepia(30%); }
+
+ui-view {
+  height: 100vh;
+  overflow-y: auto;
+  display: block;
+  position: absolute;
+  margin-left: 50px;
+  background: red; }
+
+np-menu-panel:nth-child(5n+1) div {
+  background: #e74c3c; }
+
+np-menu-panel:nth-child(5n+2) div {
+  background: #f1c40f; }
+
+np-menu-panel:nth-child(5n+3) div {
+  background: #34495e; }
+
+np-menu-panel:nth-child(5n+4) div {
+  background: #2ecc71; }
+
+np-menu-panel:nth-child(5n+5) div {
+  background: #9b59b6; }
+
+/*# sourceMappingURL=style.css.map */
