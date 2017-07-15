@@ -1,6 +1,10 @@
 {
   "name": "nickpalenchar",
   "version": "1.0.0",
+  "engines": {
+    "node": "6.11.1",
+    "npm": "3.10.10"
+  },
   "description": "The repo representing the person of the same name ^*^",
   "main": "index.js",
   "dependencies": {
