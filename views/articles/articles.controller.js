@@ -19,7 +19,4 @@ nickpal.controller('articlesCtrl',function($scope, $http, Env){
         },0)
       }
     });
-
-  // setTimeout(function(){$scope.loading = false; $scope.$digest()}, 2000);
-
 });
