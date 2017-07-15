@@ -1,0 +1,31 @@
+#articles {
+  .article-snipit {
+    border: 1px solid #4e6d8c;
+    background: #f4f4f4;
+    padding: 12px;
+    h5 {
+      margin-bottom: 4px;
+    }
+    h1 {
+      margin-top: 4px;
+    }
+  }
+
+  .content-loading {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+  }
+
+  #read-more {
+  font-family: "Raleway","Helvetica Neue",Helvetica,Arial,sans-serif
+  }
+
+  .tags > .badge {
+    font-size: 10px;
+    padding-top: 5px;
+    background: white;
+    color: #686868;
+  }
+
+}

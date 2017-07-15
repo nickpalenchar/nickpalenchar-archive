@@ -1,3 +1,23 @@
+#articles .article-snipit {
+  border: 1px solid #4e6d8c;
+  background: #f4f4f4;
+  padding: 12px; }
+  #articles .article-snipit h5 {
+    margin-bottom: 4px; }
+  #articles .article-snipit h1 {
+    margin-top: 4px; }
+#articles .content-loading {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center; }
+#articles #read-more {
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+#articles .tags > .badge {
+  font-size: 10px;
+  padding-top: 5px;
+  background: white;
+  color: #686868; }
+
 * {
   box-sizing: border-box; }
 
@@ -49,8 +69,9 @@ ui-view {
   overflow-y: auto;
   display: block;
   position: absolute;
-  margin-left: 50px;
-  background: red; }
+  width: 100vw;
+  margin-left: -100px;
+  padding-left: 200px; }
 
 np-menu-panel:nth-child(5n+1) div {
   background: #e74c3c; }

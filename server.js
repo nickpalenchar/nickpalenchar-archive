@@ -9,6 +9,10 @@ app.get('/', (req, res) => {
   res.status(200).sendFile(path.join(__dirname, 'browser/index.html'))
 });
 
+app.get('/env', (req, res) => {
+  let env = process.argv[2] === 'local' ? `localhost:3000` : 'http://nickpalenserve.herokuap.com';
+  res.status(200).json({env});
+});
 
 // app.use('/lib', express.static(path.join(__dirname, 'lib')));
 
@@ -18,7 +22,7 @@ app.staticSubDirs = function(...paths){
 };
 
 
-app.staticSubDirs('lib', 'js', 'directives', 'views', 'bower_components', 'browser', 'assets');
+app.staticSubDirs('lib', 'js', 'directives', 'views', 'bower_components', 'node_modules', 'browser', 'assets');
 
 app.use((req, res )=> res.status(307).sendFile(path.join(__dirname, 'browser/index.html')));
 
