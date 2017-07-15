@@ -2,7 +2,7 @@ nickpal.controller('articlesCtrl',function($scope, $http, Env){
   $scope.articles = null;
   $scope.baseUrl = 'http://' + Env.palenserver;
 
-  $http.get('http://'+Env.palenserver + '/articles')
+  $http.get(Env.palenserver + '/articles')
     .then(function(response){
       $scope.articles = response.data;
       try{
