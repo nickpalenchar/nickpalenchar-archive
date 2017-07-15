@@ -14,6 +14,7 @@
     <script type="text/javascript" src="../bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="../lib/angular-ui-router/release/angular-ui-router.js"></script>
     <script type="text/javascript" src="browser/app.js"></script>
+    <script type="text/javascript" src="views/articles/articles.controller.js"></script>
     <script type="text/javascript" src="../views/npm/npm.controller.js"></script>
     <script type="text/javascript" src="browser/ProjectDirectoryService.js"></script>
     <script type="text/javascript" src="../directives/menu-panel/menu-panel.directive.js"></script>
@@ -24,7 +25,7 @@
     <ui-view></ui-view>
     <div class="about-me-anchor"><!--for appending new copies of menu to-->
         <div class="about-me">
-            <np-menu-panel pic="'awwwwwwYussss'"></np-menu-panel>
+            <np-menu-panel pic="'awwwwwwYussss'" ref="'/'"></np-menu-panel>
             <np-menu-panel ref="'articles'"
                            title="'You can find my'"
                            title-bold="'articles'"

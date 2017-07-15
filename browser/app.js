@@ -1,6 +1,18 @@
 function simpleState(name){return { name: name, url: '/' + name, templateUrl: 'views/'+name+'/'+name+'.html'}}
 
+var articlesState = {
+  name: 'articles',
+  url: '/articles',
+  templateUrl: 'views/articles/articles.html',
+  controller: 'articlesCtrl'
+};
+
 var nickpal = angular.module("nickpal", ['ui.router'])
+
+  // .component('articles', {
+  //   bindings: { articles: '<' },
+  //   templateUrl: 'views/articles/articles.html'
+  // })
 
   .config(function($stateProvider, $locationProvider){
     $locationProvider.html5Mode(true);
@@ -13,10 +25,14 @@ var nickpal = angular.module("nickpal", ['ui.router'])
       .state(simpleState('npm'))
       .state(simpleState('media'))
       .state(simpleState('sideprojects'))
-      .state(simpleState('articles'));
+      .state(articlesState);
   })
 
-.run(function ($rootScope) {
+.factory('Env', function () {
+  return {palenserver: 'nickpalenserve.herokuapp.com'}
+})
+
+.run(function ($rootScope, $http, Env) {
 
   $rootScope.$on("$stateChangeSuccess", function (evt, toState) {
     console.log("new transition\n", evt, toState);
@@ -35,7 +51,15 @@ var nickpal = angular.module("nickpal", ['ui.router'])
         });
       },1020)
     }
+  });
+  console.log('RUNNUNG');
+  $http.get('/env').then(function(res){
+    Env.palenserver = res.data.env;
   })
+})
+
+.value('PALENSERVE', function () {
+
 })
 
 .controller('main', function($scope){

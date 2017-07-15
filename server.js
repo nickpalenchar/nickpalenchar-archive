@@ -9,6 +9,10 @@ app.get('/', (req, res) => {
   res.status(200).sendFile(path.join(__dirname, 'browser/index.html'))
 });
 
+app.get('/env', (req, res) => {
+  let env = process.argv[2] === 'local' ? `localhost:3000` : 'http://nickpalenserve.herokuap.com';
+  res.status(200).json({env});
+});
 
 // app.use('/lib', express.static(path.join(__dirname, 'lib')));
 
