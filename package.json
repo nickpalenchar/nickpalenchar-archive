@@ -5,11 +5,13 @@
   "main": "index.js",
   "dependencies": {
     "angular-ui-router": "^0.4.2",
+    "express": "^4.15.3",
     "normalize.css": "^5.0.0"
   },
   "devDependencies": {},
   "scripts": {
-    "start": "http-server",
+    "start": "node server.js",
+    "watch": "nodemon server.js",
     "deploy": "./deploy.bash",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,5 +24,6 @@
   "bugs": {
     "url": "https://github.com/nickpalenchar/nickpalenchar/issues"
   },
-  "homepage": "https://github.com/nickpalenchar/nickpalenchar#readme"
+  "homepage": "https://github.com/nickpalenchar/nickpalenchar#readme",
+  "keywords": []
 }
