@@ -19,4 +19,11 @@ nickpal.controller('articlesCtrl',function($scope, $http, Env){
         },0)
       }
     });
+})
+
+.controller('singleArticleCtrl', function($scope, $stateParams, $http, Env, $rootScope){
+  console.log("state paramsss ", $stateParams);
+  $scope.articleUrl = $stateParams.articleUrl;
+
+  setTimeout(function(){$rootScope.$broadcast('$stateChangeSuccess')},0);
 });

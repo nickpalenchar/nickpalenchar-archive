@@ -6,6 +6,12 @@ var articlesState = {
   templateUrl: 'views/articles/articles.html',
   controller: 'articlesCtrl'
 };
+var singleArticleState = {
+  name: 'singleArticle',
+  url: '/articles/:articleUrl',
+  template: '<h1>hello{{articleUrl}}</h1>',
+  controller: 'singleArticleCtrl'
+};
 
 var nickpal = angular.module("nickpal", ['ui.router'])
 
@@ -25,7 +31,8 @@ var nickpal = angular.module("nickpal", ['ui.router'])
       .state(simpleState('npm'))
       .state(simpleState('media'))
       .state(simpleState('sideprojects'))
-      .state(articlesState);
+      .state(articlesState)
+      .state(singleArticleState);
   })
 
 .factory('Env', function () {
@@ -36,32 +43,38 @@ var nickpal = angular.module("nickpal", ['ui.router'])
 
   $rootScope.$on("$stateChangeSuccess", function (evt, toState) {
     console.log("new transition\n", evt, toState);
+    console.log("STATECHONGEEE");
+    toState = toState || "ect";
+    handleMenu(toState);
 
-    var $menuPanel = $('.menu-panel');
-    if(toState.name === 'home')
-      $menuPanel.removeClass('collapsed');
-    else {
-      $menuPanel.addClass('collapsed force');
-      var $cachedMenu = $('.about-me', true);
-      setTimeout(function () {
-        $('body').on('mousemove', function () {
-          console.log('mouse move triggered');
-          $menuPanel.removeClass('force');
-          $('body').off();
-        });
-      },1020)
-    }
   });
   console.log('RUNNUNG');
   $http.get('/env').then(function(res){
     Env.palenserver = res.data.env;
   })
 })
-
-.value('PALENSERVE', function () {
-
-})
-
+  
 .controller('main', function($scope){
   $scope.test = 'working';
 });
+
+function handleMenu(toState){
+  var $menuPanel = $('.menu-panel');
+  // if there is no menu, page is still loading. Keep checking
+  if(!$menuPanel.length) return setTimeout(function(){handleMenu(toState)},10);
+
+  // hackey annimation for collapsing the menu panel
+  if(toState.name === 'home')
+    $menuPanel.removeClass('collapsed');
+  else {
+    console.log("STATECHONGEEEE ELSEE");
+    $menuPanel.addClass('collapsed force');
+    var $cachedMenu = $('.about-me', true);
+    setTimeout(function () {
+      $('body').on('mousemove', function () {
+        $menuPanel.removeClass('force');
+        $('body').off();
+      });
+    },1020)
+  }
+}
