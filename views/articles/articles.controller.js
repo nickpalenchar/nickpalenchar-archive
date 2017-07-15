@@ -25,5 +25,15 @@ nickpal.controller('articlesCtrl',function($scope, $http, Env){
   console.log("state paramsss ", $stateParams);
   $scope.articleUrl = $stateParams.articleUrl;
 
+  $http.get(Env.palenserver + '/articles/' + $stateParams.articleUrl)
+    .then(function (res) {
+      $scope.article = res.data.body;
+      $scope.title = res.data.title;
+      $scope.date = res.data.date;
+      var md = $('#markdown-article')[0];
+      console.log("md ", md.innerHTML);
+      md.innerHTML = marked(res.data.body);
+    });
+
   setTimeout(function(){$rootScope.$broadcast('$stateChangeSuccess')},0);
 });

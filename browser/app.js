@@ -9,7 +9,7 @@ var articlesState = {
 var singleArticleState = {
   name: 'singleArticle',
   url: '/articles/:articleUrl',
-  template: '<h1>hello{{articleUrl}}</h1>',
+  templateUrl: 'views/articles/article/article.html',
   controller: 'singleArticleCtrl'
 };
 
@@ -53,7 +53,7 @@ var nickpal = angular.module("nickpal", ['ui.router'])
     Env.palenserver = res.data.env;
   })
 })
-  
+
 .controller('main', function($scope){
   $scope.test = 'working';
 });
