@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/env', (req, res) => {
-  let env = process.argv[2] === 'local' ? `http://localhost:3000` : 'https://nickpalenserve.herokuapp.com';
+  let env = process.argv[2] === 'local' ? `http://localhost:3000` : 'https://www.nickpalenserve.us';
   res.status(200).json({env});
 });
 

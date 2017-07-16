@@ -30,7 +30,7 @@ var nickpal = angular.module("nickpal", ['ui.router'])
       .state(simpleState('about'))
       .state(simpleState('npm', 'npmCtrl'))
       .state(simpleState('media', 'mediaCtrl'))
-      .state(simpleState('sideprojects'))
+      .state(simpleState('sideprojects', 'sideprojectsCtrl'))
       .state(articlesState)
       .state(singleArticleState);
   })
