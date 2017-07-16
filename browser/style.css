@@ -67,9 +67,19 @@ section {
     color: #4b914c; }
     .g-showcase-panel.-green a:hover {
       color: #3d773e; }
+.g-showcase-panel .showcase-split {
+  display: -webkit-flex;
+  display: flex; }
 .g-showcase-panel .showcase-split > div {
-  display: inline-block;
-  padding: 12px; }
+  padding: 12px;
+  flex-grow: 1; }
+  .g-showcase-panel .showcase-split > div img {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px; }
+  .g-showcase-panel .showcase-split > div:nth-child(1) {
+    max-width: 60%; }
 
 .about-me-anchor {
   position: fixed;

@@ -50,9 +50,23 @@ section {
       }
     }
   }
+  .showcase-split {
+    display: -webkit-flex;
+    display: flex;
+  }
   .showcase-split > div {
-    display: inline-block;
+    //display: inline-block;
+    img {
+      border: 1px solid rgba(0,0,0,0.2);
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+    }
     padding: 12px;
+    flex-grow:1;
+    &:nth-child(1){
+      max-width: 60%;
+    }
   }
 }
 .about-me-anchor {

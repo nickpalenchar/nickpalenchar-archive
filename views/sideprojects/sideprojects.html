@@ -5,8 +5,8 @@
       <h1><a href="{{project.href}}" target="_blank">{{project.title}}</a></h1>
     </div>
     <div class="showcase-split">
-      <div ng-if="project.imageSrc" style="width:50%;"><img style="width: 100%; margin-top: -20% " src="{{project.imageSrc}}"></div><!--
-    --><div ng-style="{width: project.imageSrc ? '50%' : '100%'}">{{project.description}}</div>
+      <div ng-if="project.imageSrc"><img style="width: 100%;" src="{{project.imageSrc}}"></div><!--
+    --><div ng-style="">{{project.description}}</div>
     </div>
   </div>
 </section>
