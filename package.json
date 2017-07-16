@@ -11,6 +11,7 @@
     "angular-ui-router": "^0.4.2",
     "express": "^4.15.3",
     "marked": "^0.3.6",
+    "moment-format": "^1.2.8",
     "normalize.css": "^5.0.0"
   },
   "devDependencies": {},

@@ -1,3 +1,6 @@
+$collapsed-padding: 78px;
+$collapsed-font-size: 12px;
+
 @mixin blur($px) {
   -webkit-filter: blur($px);
   -moz-filter: blur($px);
@@ -7,7 +10,13 @@
 }
 
 @import '../views/articles/articles';
+@import '../views/articles/article/article';
 // home page
+
+.about-me-anchor {
+  position: fixed;
+  top: 0;
+}
 
 * {
   box-sizing: border-box;
@@ -17,9 +26,9 @@
   color: white;
   cursor: pointer;
   height: 128px;
-  width: 50px;
+  width: $collapsed-padding;
   font-size: 22px;
-    margin: 12px 0;
+  margin: 12px 0;
   position:relative;
   z-index: 10;
 
@@ -32,7 +41,7 @@
   //// color pallett
 
   transition: height 300ms ease, width 300ms ease, padding 300ms ease,
-              font-size 300ms ease;
+  font-size 300ms ease;
 
   &:hover:not(.force) {
     width: 600px;
@@ -40,9 +49,9 @@
   }
 
   &.collapsed {
-    width: 50px;
+    width: $collapsed-padding;
     padding: 2px;
-    font-size: 8px;
+    font-size: $collapsed-font-size;
     .standard {
       display: none;
     }
@@ -56,8 +65,8 @@
     }
     &.force {
       // negate hover expansion
-      width: 50px;
-      font-size: 8px;
+      width: $collapsed-padding;
+      font-size: $collapsed-font-size;
       .standard {
         display: none;
       }
@@ -75,7 +84,7 @@
 }
 
 ui-view {
-  //width: 50px;
+  //width: $collapsed-padding;
   height: 100vh;
   overflow-y: auto;
   display: block;

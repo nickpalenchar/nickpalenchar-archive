@@ -1,0 +1,8 @@
+<section id="article">
+  <div id="article-view" ng-style="{display: article ? 'inline-block' : 'flex'}">
+    <np-loading ng-if="!article"></np-loading>
+    <h1>{{title}}</h1>
+    <h6 class="blog-date">{{date}}</h6>
+    <div id="markdown-article">{{article}}</div>
+  </div>
+</section>

@@ -3,6 +3,8 @@
     border: 1px solid #4e6d8c;
     background: #f4f4f4;
     padding: 12px;
+    margin-top: 36px;
+    margin-bottom: 36px;
     h5 {
       margin-bottom: 4px;
     }
@@ -11,6 +13,12 @@
     }
   }
 
+  #loading-wrapper {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+  }
   .content-loading {
     display: -webkit-flex;
     display: flex;
@@ -26,6 +34,7 @@
     padding-top: 5px;
     background: white;
     color: #686868;
+    margin-right: 4px;
   }
 
 }

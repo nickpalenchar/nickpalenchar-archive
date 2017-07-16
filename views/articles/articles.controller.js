@@ -1,10 +1,14 @@
 nickpal.controller('articlesCtrl',function($scope, $http, Env){
   $scope.articles = null;
-  $scope.baseUrl = 'http://' + Env.palenserver;
+  $scope.baseUrl = Env.palenserver;
 
   $http.get(Env.palenserver + '/articles')
     .then(function(response){
-      $scope.articles = response.data;
+      $scope.articles = response.data.map(function(article){
+        article.date = parseDate(article.date);
+        return article;
+      });
+
       try{
         $scope.$digest();
       }catch(e){
@@ -18,5 +22,23 @@ nickpal.controller('articlesCtrl',function($scope, $http, Env){
           })
         },0)
       }
+
     });
+})
+
+.controller('singleArticleCtrl', function($scope, $stateParams, $http, Env, $rootScope){
+  console.log("state paramsss ", $stateParams);
+  $scope.articleUrl = $stateParams.articleUrl;
+
+  $http.get(Env.palenserver + '/articles/' + $stateParams.articleUrl)
+    .then(function (res) {
+      $scope.article = res.data.body;
+      $scope.title = res.data.title;
+      $scope.date = parseDate(res.data.date);
+      var md = $('#markdown-article')[0];
+      console.log("md ", md.innerHTML);
+      md.innerHTML = marked(res.data.body);
+    });
+
+  setTimeout(function(){$rootScope.$broadcast('$stateChangeSuccess')},0);
 });
