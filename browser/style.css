@@ -44,6 +44,10 @@
 #article img {
   width: 100%; }
 
+section {
+  max-width: 828px;
+  padding-right: 24px; }
+
 .about-me-anchor {
   position: fixed;
   top: 0; }

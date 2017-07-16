@@ -14,6 +14,11 @@ $full-font-size: 24px;
 @import '../views/articles/article/article';
 // home page
 
+section {
+  max-width: 828px;
+  padding-right: 24px;
+}
+
 .about-me-anchor {
   position: fixed;
   top: 0;
