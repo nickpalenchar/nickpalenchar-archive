@@ -56,7 +56,7 @@
   cursor: pointer;
   height: 128px;
   width: 78px;
-  font-size: 22px;
+  font-size: 24px;
   margin: 12px 0;
   position: relative;
   z-index: 10;
@@ -71,18 +71,18 @@
   .menu-panel.collapsed {
     width: 78px;
     padding: 2px;
-    font-size: 12px; }
+    font-size: 15px; }
     .menu-panel.collapsed .standard {
       display: none; }
     .menu-panel.collapsed:hover {
       width: 500px;
-      font-size: 22px;
+      font-size: 24px;
       position: relative; }
       .menu-panel.collapsed:hover .standard {
         display: inline; }
     .menu-panel.collapsed.force {
       width: 78px;
-      font-size: 12px; }
+      font-size: 15px; }
       .menu-panel.collapsed.force .standard {
         display: none; }
   .menu-panel.pic {

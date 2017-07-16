@@ -1,5 +1,6 @@
 $collapsed-padding: 78px;
-$collapsed-font-size: 12px;
+$collapsed-font-size: 15px;
+$full-font-size: 24px;
 
 @mixin blur($px) {
   -webkit-filter: blur($px);
@@ -27,7 +28,7 @@ $collapsed-font-size: 12px;
   cursor: pointer;
   height: 128px;
   width: $collapsed-padding;
-  font-size: 22px;
+  font-size: $full-font-size;
   margin: 12px 0;
   position:relative;
   z-index: 10;
@@ -57,7 +58,7 @@ $collapsed-font-size: 12px;
     }
     &:hover {
       width: 500px;
-      font-size: 22px;
+      font-size: $full-font-size;
       position: relative;
       .standard {
         display: inline;
