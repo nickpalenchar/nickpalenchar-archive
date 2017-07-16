@@ -1,7 +1,7 @@
 nickpal.controller('articlesCtrl',function($scope, $http, Env){
   $scope.articles = null;
   $scope.baseUrl = Env.palenserver;
-
+  console.log("PALENSERVERRR ", Env.palenserver);
   $http.get(Env.palenserver + '/articles')
     .then(function(response){
       $scope.articles = response.data.map(function(article){
@@ -38,6 +38,16 @@ nickpal.controller('articlesCtrl',function($scope, $http, Env){
       var md = $('#markdown-article')[0];
       console.log("md ", md.innerHTML);
       md.innerHTML = marked(res.data.body);
+    })
+    .catch(function (res) {
+      if(res.status === 404){
+        $scope.article = res.data.body;
+        $scope.title = "404: \"" + res.data.title + "\"";
+        $scope.date = parseDate(res.data.date);
+        $scope.fourOfour = true;
+        var md = $('#markdown-article')[0];
+        md.innerHTML = marked(res.data.body);
+      }
     });
 
   setTimeout(function(){$rootScope.$broadcast('$stateChangeSuccess')},0);
