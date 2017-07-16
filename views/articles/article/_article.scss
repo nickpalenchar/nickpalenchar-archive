@@ -1,8 +1,23 @@
 #article {
   #article-view {
-    margin: 48px 0 0;
+    margin: 36px 0 0;
     display: inline-block;
     padding-left: 80px;
     max-width: 760px;
+    width: 100%;
+    overflow-y: visible;
+    justify-content: center;
+  }
+  np-loading > .loader {
+    position: relative;
+    min-width: 10px;
+    margin: 80px auto;
+  }
+  .blog-date {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  img {
+    width: 100%;
   }
 }
