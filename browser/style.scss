@@ -35,7 +35,24 @@ section {
     background: #ebe5ec;
     a {
       color: #911616;
+      &:hover {
+        color: #781212
+      }
     }
+  }
+  &.-green {
+    border-color: #416142;
+    background: #e2ece5;
+    a {
+      color: #4b914c;
+      &:hover {
+        color: #3d773e;
+      }
+    }
+  }
+  .showcase-split > div {
+    display: inline-block;
+    padding: 12px;
   }
 }
 .about-me-anchor {

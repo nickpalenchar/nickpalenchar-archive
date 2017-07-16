@@ -58,6 +58,18 @@ section {
   background: #ebe5ec; }
   .g-showcase-panel.-red a {
     color: #911616; }
+    .g-showcase-panel.-red a:hover {
+      color: #781212; }
+.g-showcase-panel.-green {
+  border-color: #416142;
+  background: #e2ece5; }
+  .g-showcase-panel.-green a {
+    color: #4b914c; }
+    .g-showcase-panel.-green a:hover {
+      color: #3d773e; }
+.g-showcase-panel .showcase-split > div {
+  display: inline-block;
+  padding: 12px; }
 
 .about-me-anchor {
   position: fixed;

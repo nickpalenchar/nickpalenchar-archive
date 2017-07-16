@@ -18,7 +18,7 @@ nickpal.controller('npmCtrl', function ($scope, ProjectDirectory) {
       href: "https://www.npmjs.com/package/sundial-js"
     }
   ];
-  $scope.myProjects = [
+  $scope.mySideprojects = [
     {
       title: "t-minus",
       imageSrc: null,
