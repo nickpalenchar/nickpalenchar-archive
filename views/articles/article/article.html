@@ -3,6 +3,9 @@
     <np-loading ng-if="!article"></np-loading>
     <h1>{{title}}</h1>
     <h6 class="blog-date">{{date}}</h6>
+    <div ng-if="fourOfour" class="alert alert-warning">
+      The article you are looking for doesn't seem to exist <span style="font-family: monospace;">(404)</span>... but if it <i>did</i> exist, it might read something like this:
+    </div>
     <div id="markdown-article">{{article}}</div>
   </div>
 </section>
