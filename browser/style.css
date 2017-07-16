@@ -1,9 +1,5 @@
 #articles .article-snipit {
-  border: 1px solid #4e6d8c;
-  background: #f4f4f4;
-  padding: 12px;
-  margin-top: 36px;
-  margin-bottom: 36px; }
+  background: #f4f4f4; }
   #articles .article-snipit h5 {
     margin-bottom: 4px; }
   #articles .article-snipit h1 {
@@ -47,6 +43,21 @@
 section {
   max-width: 828px;
   padding-right: 24px; }
+
+.x-button {
+  font-size: 16px; }
+
+.g-showcase-panel-generic, #articles .article-snipit, .g-showcase-panel {
+  border: 1px solid #4e6d8c;
+  padding: 12px;
+  margin-top: 36px;
+  margin-bottom: 36px; }
+
+.g-showcase-panel.-red {
+  border-color: #61313c;
+  background: #ebe5ec; }
+  .g-showcase-panel.-red a {
+    color: #911616; }
 
 .about-me-anchor {
   position: fixed;
@@ -107,14 +118,14 @@ ui-view {
   margin-left: -100px;
   padding-left: 200px; }
 
-np-menu-panel:nth-child(5n+1) div {
+np-menu-panel:nth-child(5n+3) div {
   background: #e74c3c; }
 
-np-menu-panel:nth-child(5n+2) div {
+np-menu-panel:nth-child(5n+1) div {
   background: #f1c40f; }
 
-np-menu-panel:nth-child(5n+3) div {
-  background: #34495e; }
+np-menu-panel:nth-child(5n+2) div {
+  background: #3f5972; }
 
 np-menu-panel:nth-child(5n+4) div {
   background: #2ecc71; }
