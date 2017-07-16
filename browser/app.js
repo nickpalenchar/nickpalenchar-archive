@@ -1,4 +1,4 @@
-function simpleState(name){return { name: name, url: '/' + name, templateUrl: 'views/'+name+'/'+name+'.html'}}
+function simpleState(name, controller){var r = { name: name, url: '/' + name, templateUrl: 'views/'+name+'/'+name+'.html'}; if(controller) r.controller = controller; return r}
 
 var articlesState = {
   name: 'articles',
@@ -28,7 +28,7 @@ var nickpal = angular.module("nickpal", ['ui.router'])
         url: '/'
       })
       .state(simpleState('about'))
-      .state(simpleState('npm'))
+      .state(simpleState('npm', 'npmCtrl'))
       .state(simpleState('media'))
       .state(simpleState('sideprojects'))
       .state(articlesState)

@@ -1,6 +1,15 @@
 <section id="npm">
-  <a ui-sref="home">x</a>
-
-  this is the npm section.
-  {{projects}}
+  <h3><a ui-sref="home" class>&times;</a> npm installables</h3>
+  <div class="alert alert-default">
+    I'm on npm as <a href="http://www.npmjs.com/~npalenchar" target="_blank">~npalenchar</a>. Check out the projects there or below!
+  </div>
+  <div class="g-showcase-panel -red" ng-repeat="project in myProjects">
+    <div class="header">
+      <h1><a href="{{project.href}}" target="_blank">{{project.title}}</a></h1>
+    </div>
+    <div class="showcase-split">
+      <div ng-if="project.imageSrc"><img src="{{project.imageSrc}}"></div><!--
+    --><div>{{project.description}}</div>
+    </div>
+  </div>
 </section>
