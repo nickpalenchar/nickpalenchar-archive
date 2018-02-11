@@ -3,6 +3,13 @@ nickpal.controller('npmCtrl', function ($scope, ProjectDirectory) {
   console.log("running");
   $scope._projcets = [
     {
+      title: "gift-wrap",
+      imageScr: null,
+      description: "An interactive CLI that allows you to turn your own javascript files into CLI, turning arguments into option flags you can set in your terminal.",
+      href: "https://www.npmjs.com/package/@npalenchar/gift-wrap",
+      role: "Sole developer"
+    },
+    {
       title: "t-minus",
       imageSrc: null,
       description: "A human friendly `setTimeout`/`setInterval`. t-minus provides a class for simple countdown and countup operations. Set multiple timers, toggle pausing, get human readable " +
@@ -19,6 +26,13 @@ nickpal.controller('npmCtrl', function ($scope, ProjectDirectory) {
     }
   ];
   $scope.mySideprojects = [
+    {
+      title: "gift-wrap",
+      imageScr: null,
+      description: "An interactive CLI that allows you to turn your own javascript files into CLI, turning arguments into option flags you can set in your terminal.",
+      href: "https://www.npmjs.com/package/@npalenchar/gift-wrap",
+      role: "Sole developer"
+    },
     {
       title: "t-minus",
       imageSrc: null,
