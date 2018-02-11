@@ -6,7 +6,7 @@ nickpal.controller('npmCtrl', function ($scope, ProjectDirectory) {
       title: "gift-wrap",
       imageScr: null,
       description: "An interactive CLI that allows you to turn your own javascript files into CLI, turning arguments into option flags you can set in your terminal.",
-      href: "https://www.npmjs.com/package/@npalenchar/gift-wrap",
+      href: "https://www.npmjs.com/package/@npalenchar/giftwrap",
       role: "Sole developer"
     },
     {
@@ -30,7 +30,7 @@ nickpal.controller('npmCtrl', function ($scope, ProjectDirectory) {
       title: "gift-wrap",
       imageScr: null,
       description: "An interactive CLI that allows you to turn your own javascript files into CLI, turning arguments into option flags you can set in your terminal.",
-      href: "https://www.npmjs.com/package/@npalenchar/gift-wrap",
+      href: "https://www.npmjs.com/package/@npalenchar/giftwrap",
       role: "Sole developer"
     },
     {
