@@ -38,6 +38,7 @@ nickpal.controller('articlesCtrl',function($scope, $http, Env){
       var md = $('#markdown-article')[0];
       console.log("md ", md.innerHTML);
       md.innerHTML = marked(res.data.body);
+      window.page_identifier = 'u4u82b7odoibe9a' + articleUrl;
     })
     .catch(function (res) {
       if(res.status === 404){
