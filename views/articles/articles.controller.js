@@ -1,7 +1,7 @@
 nickpal.controller('articlesCtrl',function($scope, $http, Env){
   $scope.articles = null;
   $scope.baseUrl = Env.palenserver;
-  console.log("PALENSERVERRR ", Env.palenserver);
+
   $http.get(Env.palenserver + '/articles')
     .then(function(response){
       $scope.articles = response.data.map(function(article){
@@ -32,13 +32,13 @@ nickpal.controller('articlesCtrl',function($scope, $http, Env){
 
   $http.get(Env.palenserver + '/articles/' + $stateParams.articleUrl)
     .then(function (res) {
+      window.page_identifier = 'u4u82b7odoibe9a_' + articleUrl;
       $scope.article = res.data.body;
       $scope.title = res.data.title;
       $scope.date = parseDate(res.data.date);
       var md = $('#markdown-article')[0];
-      console.log("md ", md.innerHTML);
+
       md.innerHTML = marked(res.data.body);
-      window.page_identifier = 'u4u82b7odoibe9a' + articleUrl;
     })
     .catch(function (res) {
       if(res.status === 404){
