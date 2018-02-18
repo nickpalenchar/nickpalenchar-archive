@@ -47,13 +47,19 @@ nickpal.controller('articlesCtrl',function($scope, $http, Env){
           return setTimeout(function(){resetDisqus(timeout*2)},timeout);
         }
         console.log("RESETTING THE THING? ", $stateParams.articleUrl);
-        $window.DISQUS.reset({
-          reload: true,
-          config: function () {
-            this.page.identifier = "disqusid" + $stateParams.articleUrl;
-            this.page.url = "https://www.nickpalenchar.com/#!newthread";
-          }
-        });
+        try {
+          $window.DISQUS.reset({
+            reload: true,
+            config: function () {
+              this.page.identifier = "disqusid" + $stateParams.articleUrl.replace(/-/g,"");
+              this.page.url = "https://www.nickpalenchar.com/#!newthread";
+            }
+          });
+        }
+        catch (e) {
+          console.log("DISQUS ERROR ");
+          console.dir(e);
+        }
       }
 
       resetDisqus();
