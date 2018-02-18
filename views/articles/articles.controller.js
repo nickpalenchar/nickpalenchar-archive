@@ -38,7 +38,7 @@ nickpal.controller('articlesCtrl',function($scope, $http, Env){
       var md = $('#markdown-article')[0];
 
       md.innerHTML = marked(res.data.body);
-
+      console.log("DIS;?? ", $window.DISQUS);
       $window.DISQUS.reset({
         reload: true,
         config: function () {
