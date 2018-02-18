@@ -34,7 +34,7 @@ nickpal.controller('articlesCtrl',function($scope, $http, Env){
     .then(function (res) {
       $scope.article = res.data.body;
       $scope.title = res.data.title;
-      console.log("resss ss uhocruhr., ", res.data.date.getTime());
+      console.log("resss ss uhocruhr., ", typeof res.data.date);
       $scope.date = parseDate(res.data.date);
       console.log("DATAAA ", $scope.date);
       var md = $('#markdown-article')[0];
