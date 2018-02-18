@@ -34,7 +34,9 @@ nickpal.controller('articlesCtrl',function($scope, $http, Env){
     .then(function (res) {
       $scope.article = res.data.body;
       $scope.title = res.data.title;
+      console.log("resss ss uhocruhr., ", res.data.date);
       $scope.date = parseDate(res.data.date);
+      console.log("DATAAA ", $scope.date);
       var md = $('#markdown-article')[0];
 
       md.innerHTML = marked(res.data.body);
@@ -44,7 +46,7 @@ nickpal.controller('articlesCtrl',function($scope, $http, Env){
         if(!$window.DISQUS){
           return setTimeout(function(){resetDisqus(timeout*2)},timeout);
         }
-        console.log("RESETTING THE THING? ", $stateParams.articleUrl)
+        console.log("RESETTING THE THING? ", $stateParams.articleUrl);
         $window.DISQUS.reset({
           reload: true,
           config: function () {
