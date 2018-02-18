@@ -38,8 +38,12 @@ nickpal.controller('articlesCtrl',function($scope, $http, Env){
       var md = $('#markdown-article')[0];
 
       md.innerHTML = marked(res.data.body);
-      setTimeout(function(){
-        console.log("DIS;?? ", $window.DISQUS);
+
+      function resetDisqus(timeout){
+        timeout = timeout || 1;
+        if(!$window.DISQUS){
+          return setTimeout(function(){resetDisqus(timeout*2)},timeout);
+        }
         $window.DISQUS.reset({
           reload: true,
           config: function () {
@@ -47,7 +51,9 @@ nickpal.controller('articlesCtrl',function($scope, $http, Env){
             this.page.url = "https://www.nickpalenchar.com/#!newthread";
           }
         });
-      }, 1);
+      }
+
+      resetDisqus();
 
     })
     .catch(function (res) {
