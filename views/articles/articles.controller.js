@@ -32,13 +32,20 @@ nickpal.controller('articlesCtrl',function($scope, $http, Env){
 
   $http.get(Env.palenserver + '/articles/' + $stateParams.articleUrl)
     .then(function (res) {
-      $window.page_identifier = 'u4u82b7odoibe9a_' + $stateParams.articleUrl;
       $scope.article = res.data.body;
       $scope.title = res.data.title;
       $scope.date = parseDate(res.data.date);
       var md = $('#markdown-article')[0];
 
       md.innerHTML = marked(res.data.body);
+
+      $window.DISQUS.reset({
+        reload: true,
+        config: function () {
+          this.page.identifier = "disqusid" + $stateParams.articleUrl;
+          this.page.url = "https://www.nickpalenchar.com/#!newthread";
+        }
+      });
 
     })
     .catch(function (res) {
