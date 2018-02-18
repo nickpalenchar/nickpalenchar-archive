@@ -46,7 +46,7 @@ nickpal.controller('articlesCtrl',function($scope, $http, Env){
         if(!$window.DISQUS){
           return setTimeout(function(){resetDisqus(timeout*2)},timeout);
         }
-        console.log("RESETTING THE THING? ", $stateParams.articleUrl);
+        console.log("RESETTING THE THING? ", String(new Date(res.data.date).getTime()));
         try {
           $window.DISQUS.reset({
             reload: true,
