@@ -32,7 +32,7 @@ nickpal.controller('articlesCtrl',function($scope, $http, Env){
 
   $http.get(Env.palenserver + '/articles/' + $stateParams.articleUrl)
     .then(function (res) {
-      $window.page_identifier = 'u4u82b7odoibe9a_' + articleUrl;
+      $window.page_identifier = 'u4u82b7odoibe9a_' + $stateParams.articleUrl;
       $scope.article = res.data.body;
       $scope.title = res.data.title;
       $scope.date = parseDate(res.data.date);
