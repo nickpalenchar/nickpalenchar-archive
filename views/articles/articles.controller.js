@@ -51,7 +51,7 @@ nickpal.controller('articlesCtrl',function($scope, $http, Env){
           $window.DISQUS.reset({
             reload: true,
             config: function () {
-              this.page.identifier = "disqusid" + $stateParams.articleUrl.replace(/-/g,"");
+              this.page.identifier = String(new Date(res.data.date).getTime());
               this.page.url = "https://www.nickpalenchar.com/#!newthread";
             }
           });
