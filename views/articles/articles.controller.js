@@ -52,7 +52,7 @@ nickpal.controller('articlesCtrl',function($scope, $http, Env){
             reload: true,
             config: function () {
               this.page.identifier = String(new Date(res.data.date).getTime());
-              this.page.url = "https://www.nickpalenchar.com/#!newthread";
+              this.page.url = "https://www.nickpalenchar.com/" + $stateParams.articleUrl + "#!newthread";
             }
           });
         }
