@@ -41,20 +41,26 @@ nickpal.controller('articlesCtrl',function($scope, $http, Env){
 
       md.innerHTML = marked(res.data.body);
 
+      var dVars = {
+        identifier: $stateParams.articleUrl,
+        url: "https://www.nickpalenchar.com/" + $stateParams.articleUrl
+      };
+
       function resetDisqus(timeout){
         timeout = timeout || 1;
         if(!$window.DISQUS){
           return setTimeout(function(){resetDisqus(timeout*2)},timeout);
         }
-        console.log("RESETTING THE THING? ", String(new Date(res.data.date).getTime()));
+        console.log("RESETTING THE THING? ", dVars);
         try {
           $window.DISQUS.reset({
             reload: true,
             config: function () {
-              this.page.identifier = String(new Date(res.data.date).getTime());
-              this.page.url = "https://www.nickpalenchar.com/" + $stateParams.articleUrl + "#!newthread";
+              this.page.identifier = dVars.identifier;
+              this.page.url = dVars.url
             }
           });
+          console.log('success? ', dVars);
         }
         catch (e) {
           console.log("DISQUS ERROR ");
