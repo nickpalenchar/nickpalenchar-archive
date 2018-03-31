@@ -6,19 +6,20 @@ var articlesState = {
   templateUrl: 'views/articles/articles.html',
   controller: 'articlesCtrl'
 };
+var singleArticleState_legacy = {
+  name: 'singleArticle_legacy',
+  url: '/articles/:articleUrl',
+  templateUrl: 'views/articles/article/article.html',
+  controller: 'singleArticleCtrl'
+};
 var singleArticleState = {
   name: 'singleArticle',
-  url: '/articles/:articleUrl',
+  url: '/:articleUrl',
   templateUrl: 'views/articles/article/article.html',
   controller: 'singleArticleCtrl'
 };
 
 var nickpal = angular.module("nickpal", ['ui.router'])
-
-  // .component('articles', {
-  //   bindings: { articles: '<' },
-  //   templateUrl: 'views/articles/articles.html'
-  // })
 
   .config(function($stateProvider, $locationProvider){
     $locationProvider.html5Mode(true);
@@ -32,7 +33,8 @@ var nickpal = angular.module("nickpal", ['ui.router'])
       .state(simpleState('media', 'mediaCtrl'))
       .state(simpleState('sideprojects', 'sideprojectsCtrl'))
       .state(articlesState)
-      .state(singleArticleState);
+      .state(singleArticleState_legacy)
+      .state(singleArticleState)
   })
 
 .factory('Env', function () {
