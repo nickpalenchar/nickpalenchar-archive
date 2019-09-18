@@ -27,11 +27,17 @@ nickpal.controller('npmCtrl', function ($scope, ProjectDirectory) {
   ];
   $scope.mySideprojects = [
     {
+      title: "endpoint.io",
+      description: "Express middleware that wraps around socket.io, which manages the socket object as a singleton, and exposes it for use in API endpoints.",
+      href: "https://www.npmjs.com/package/endpoint.io",
+      role: "npm i endpoint.io"
+    },
+    {
       title: "gift-wrap",
       imageScr: null,
       description: "An interactive CLI that allows you to turn your own javascript files into CLI, turning arguments into option flags you can set in your terminal.",
       href: "https://www.npmjs.com/package/@npalenchar/giftwrap",
-      role: "Sole developer"
+      role: "npm i -g @npalenchar/giftwrap"
     },
     {
       title: "t-minus",
@@ -39,7 +45,7 @@ nickpal.controller('npmCtrl', function ($scope, ProjectDirectory) {
       description: "A human friendly `setTimeout`/`setInterval`. t-minus provides a class for simple countdown and countup operations. Set multiple timers, toggle pausing, get human readable " +
       "formats for UI's, pass functions to be invoked once or multiple times. And oh so much more.",
       href: "https://www.npmjs.com/package/t-minus",
-      role: "Sole developer"
+      role: "npm i gift-wrap"
     },
     {
       title: "SundialJS",

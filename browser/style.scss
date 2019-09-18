@@ -168,3 +168,21 @@ np-menu-panel:nth-child(5n+4) div {
 np-menu-panel:nth-child(5n+5) div {
   background: #9b59b6;
 }
+
+.badge {
+  display: inline-block;
+  padding: 6px;
+  background-color: #4582EC;
+  color: white;
+  border: 1px solid white;
+  border-radius: 6px 6px 5px 6px;
+  font-family: sans-serif;
+  font-size: 12px;
+  vertical-align: text-bottom;
+  margin: auto 8px;
+}
+.invert {
+  color: #4582EC;
+  background-color: white;
+  border-color: #4582EC;
+}

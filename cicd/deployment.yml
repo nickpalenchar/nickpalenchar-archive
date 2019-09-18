@@ -1,0 +1,32 @@
+#
+# This file was automatically generated, do not edit directly!
+# Rather, edit `deployment.yml.template` and run `. build-deployment.sh` to generate
+
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: personal-site-frontend
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: personal-site-frontend
+      labels:
+        app: personal-site
+        name: nickpalenchar
+    spec:
+      containers:
+      - image: 939117166617.dkr.ecr.us-east-1.amazonaws.com/nickpalenchar:latest
+        name: nickpalenserver
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nickpalenchar
+spec:
+  type: LoadBalancer
+  selector:
+    name: nickpalenchar
+  ports:
+    - { port: 80, targetPort: 3333, name: http }
+    - { port: 433, targetPort: 3333, name: https }

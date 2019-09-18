@@ -1,8 +1,16 @@
 <section id="sideprojects">
-  This is the side projects section
   <div class="g-showcase-panel -green" ng-repeat="project in mySideprojects">
     <div class="header">
-      <h1><a href="{{project.href}}" target="_blank">{{project.title}}</a></h1>
+      <h1 style="display: inline"><a href="{{project.href}}" target="_blank">{{project.title}}</a></h1><span class="badge" ng-if="project.role">{{project.role}}</span>
+    </div>
+    <div class="showcase-split">
+      <div ng-if="project.imageSrc"><img style="width: 100%;" src="{{project.imageSrc}}"></div><!--
+    --><div ng-style="">{{project.description}}</div>
+    </div>
+  </div>
+  <div class="g-showcase-panel -green" ng-repeat="project in libraries">
+    <div class="header">
+      <h1 style="display: inline"><a href="{{project.href}}" target="_blank">{{project.title}}</a></h1><span class="badge invert" ng-if="project.role">{{project.role}}</span>
     </div>
     <div class="showcase-split">
       <div ng-if="project.imageSrc"><img style="width: 100%;" src="{{project.imageSrc}}"></div><!--
